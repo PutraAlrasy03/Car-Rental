@@ -1,0 +1,576 @@
+:root{
+    --lightOrange: #e99041;
+    --orange: #e67e22;
+    --blue: #2980b9;
+    --darkBlue: #20638f;
+    --lightRed: #ed7669;
+    --red: #e74c3c;
+}
+
+*{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f6f6f6;
+}
+
+/*********************header*********************/
+header{
+    display: grid;
+    grid-template-columns: 12.5rem 12.5rem;
+    justify-items: center;
+    justify-content: center;
+    height: 15vh;
+    column-gap: 60rem;
+}
+
+.header_span_title{
+    /* border: 1px solid red; */
+    height: fit-content;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.header_span_title::after{
+    content: "";
+    position: absolute;
+    background-color: var(--orange);
+    width: 30%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+}
+
+.header_ul_button{
+    width: 140%;
+}
+
+.header_ul_button li{
+    list-style: none;
+    /* border: 1px solid red; */
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header_ul_button li:first-child{
+    margin-right: 1rem;
+}
+
+.header_ul_button li:last-child{
+    color: #fff;
+    background-color: var(--lightRed);
+}
+
+.header_ul_button li:last-child:hover{
+    background-color: var(--red);
+    transition: 0.3s ease-in;
+}
+/*********************header*********************/
+
+
+
+/*********************main*********************/
+main{
+    display: grid;
+    grid-template-rows: 25% 75%;
+    height: 85vh;
+}
+
+.main_title{
+}
+
+.main_title_title{
+    text-align: center;
+    color: #a2a2a2;
+    margin-bottom: 1rem;
+}
+
+.main_title_description{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;    
+}
+
+.main_div_rentSelect{
+}
+
+/*********************main*********************/
+
+
+/*********************car select*********************/
+
+.main_div_rentSelect{
+    display: grid;
+    grid-template-rows: 80% 20%;
+
+    /* hide the overflow */
+    overflow: hidden;
+
+}
+
+.main_rentSelect_card{
+    display: flex;
+    height: 100%;
+    padding: 2rem;
+    /* background-color: green; */
+    width: 150vw;
+    
+    /* for translate properties */
+    transform: translateX(10%);
+    transition: 0.3s ease-in-out;
+}
+
+.main_card_car1,
+.main_card_car2,
+.main_card_car3,
+.main_card_car4,
+.main_card_car5,
+.main_card_car6,
+.main_card_car7{
+    /* display: inline-block; */
+    /* width: 20%; */
+    width: 10%;
+    height: 100%;
+    /* border: 1px solid purple; */
+    border-radius: 10px;
+    /* background-color: purple; */
+    margin-right: 2rem;
+
+}
+
+.main_div_carToggle{
+    display: flex;
+    width: 100vw;
+    gap: 1.5rem;
+    justify-content: center;
+    /* border: 1px solid red; */
+    /* background-color: aqua; */
+}
+
+.iconLeft,
+.iconRight{
+    margin-top: 1rem;
+    cursor: pointer;
+}
+/*********************car select*********************/
+
+
+
+
+/***********************inside card***********************/
+.card_property{
+    box-shadow: 10px 10px 20px #888888;
+}
+
+.main_card_car1{
+
+}
+
+.main_card_imageHolder{
+    background-color: #a2a2a2;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.main_card_imageHolder img{
+    width: 12rem;
+    height: 8rem;
+}
+
+.main_card_carTitle{
+    margin-left: 1rem;
+    font-weight: 600;
+}
+
+.main_card_price{
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.price{
+    color: var(--orange);
+}
+
+.pricePerMonth{
+    color: #b3b3b3;
+}
+
+.month{
+    font-size: 0.8rem;
+    color: #b3b3b3;
+}
+
+.btnRent{
+    margin-top: 1rem;
+    width: 80%;
+    margin-left: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    outline-style: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 400;
+    background-color: var(--blue);
+}
+/***********************inside card***********************/
+
+
+
+
+
+/***********************rent form***********************/
+.main_div_rentalFormContainer{
+    border: 1px solid #000;
+    border-radius: 8px;
+    position: fixed;
+    width: 60%;
+    height: 60%;
+    background-color: #eee;
+    left: 23%;
+    transform: translateY(-10%);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    opacity: 0%;
+    visibility: hidden;
+}
+
+.main_rentalFormContainer_carImage{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.11)), url("/abstract_background2.jpg");
+}
+
+.main_rentalFormContainer_carImage img{
+    margin-top: 2rem;
+    width: 28rem;
+    height: 20rem;
+    /* background-color: #a2a2a2; */
+}
+
+
+
+
+.main_rentalFormContainer_rentalForm{
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 50% 50%;
+    /* grid-auto-rows: minmax(10%, auto); */
+    grid-template-rows: 10% 5% 10% 5% 10% 5% 10% 15% auto;
+    grid-template-areas: 
+        "title title"
+        "labelLocation labelLocation"
+        "inputLocation inputLocation"
+        "labelFromDate labelToDate"
+        "inputFromDate inputToDate"
+        "labelVehicle labelVehicle"
+        "vehicleName vehicleName"
+        "submit submit"
+    ;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    justify-content: center;
+}
+
+.main_rentalFormContainer_rentalForm span:first-child{
+    grid-area: title;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.main_rentalFormContainer_rentalForm label:nth-child(2){
+    grid-area: labelLocation;
+}
+
+.main_rentalFormContainer_rentalForm select{
+    grid-area: inputLocation;
+    cursor: pointer;
+}
+
+.main_rentalFormContainer_rentalForm label:nth-child(4){
+    grid-area: labelFromDate;
+}
+
+.main_rentalFormContainer_rentalForm label:nth-child(6){
+    grid-area: labelToDate;
+}
+
+.main_rentalFormContainer_rentalForm input[type=date]:first-child{
+    grid-area: inputFromDate;
+}
+
+.main_rentalFormContainer_rentalForm input[type=date]:last-child{
+    grid-area: inputToDate;
+}
+
+.main_rentalFormContainer_rentalForm label:last-of-type{
+    grid-area: labelVehicle;
+}
+
+.main_rentalFormContainer_rentalForm span:last-of-type{
+    grid-area: vehicleName;
+    background-color: #ddd;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.main_rentalFormContainer_rentalForm button{
+    grid-area: submit;
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--blue);
+    border: 1px solid #000;
+    border-radius: 8px;
+    margin-top: 1rem;
+
+}
+
+.main_rentalFormContainer_rentalForm button:hover{
+    background-color: var(--darkBlue);
+    transition: 0.3s ease-in;
+}
+
+.main_rentalFormContainer_rentalForm input,
+.main_rentalFormContainer_rentalForm select
+{
+    border-radius: 5px;
+    border-style: none;
+    padding: 0.5rem;
+}
+
+.iconCloseForm,
+.iconClosePayment{
+    position: absolute;
+    left: 97%;
+    top: 1%;
+    cursor: pointer;
+}
+
+.form-active{
+    visibility: visible;
+    opacity: 100%;
+    transform: translateY(6%);
+    transition: 0.7s ease-in-out;
+    z-index: 2;
+}
+
+/***********************rent form***********************/
+
+
+
+/***********************gray background**********************/
+.background-popup{
+    position: fixed;
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.233);
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    visibility: visible;
+}
+/***********************gray background**********************/
+
+
+
+/***********************payment**********************/
+.main_div_paymentContainer{
+    position: fixed;
+    width: 50%;
+    height: 80%;
+    background-color: #eee;
+    text-align: center;
+    left: 27%;
+    transform: translateY(-14%);
+    border-radius: 8px;
+    border: 1px solid #000;
+    opacity: 0%;
+    visibility: hidden;
+}
+
+.main_div_paymentContainer p{
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main_div_paymentContainer img{
+    width: 8rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+
+.main_div_paymentContainer form{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 30% 50%; 
+    grid-template-rows: 15% 15% 15% 20% 15% 15% 20%;
+    grid-template-areas: 
+        "labelPrice Price"
+        "labelCardName inputCardName"
+        "labelCardNumber inputCardNumber"
+        "labelCardNumber cardIcon"
+        "labelExpirationDate inputMonthYear"
+        "labelSecurityCode inputSecurityCode"
+        "buttonSubmit buttonSubmit"
+    ;
+    row-gap: 0.5rem;
+    column-gap: 2rem;
+    /* justify-content: center; */
+}
+
+.main_div_paymentContainer label:first-child{
+    /* background-color: yellow; */
+    grid-area: labelPrice;
+    text-align: end;
+    /* background-color: #20638f; */
+}
+
+.main_div_paymentContainer span{
+    grid-area: Price;
+    text-align: start;
+    color: var(--red);
+    font-weight: 800;
+    font-size: 1.3rem;
+    /* background-color: var(--red); */
+}
+
+.main_div_paymentContainer label:nth-child(5){
+    /* background-color: red; */
+    text-align: end;
+}
+
+.main_div_paymentContainer input:first-of-type{
+    /* background-color: #eee; */
+    grid-area: inputCardName;
+    /* background-color: #20638f; */
+}
+
+
+.main_div_paymentContainer label:nth-child(3){
+    /* background-color: red; */
+    grid-area: labelCardNumber;
+    text-align: end;
+    /* background-color: #20638f; */
+}
+
+.main_div_paymentContainer input:nth-child(4){
+    /* background-color: red; */
+    grid-area: inputCardNumber;
+    
+}
+
+.main_div_paymentContainer div:first-of-type{
+    /* background-color: #20638f; */
+    grid-area: cardIcon;
+    text-align: start;
+}
+
+.main_div_paymentContainer label:nth-child(8){
+    /* background-color: #888888; */
+    grid-area: labelExpirationDate;
+    text-align: end;
+    /* background-color: #888888; */
+
+}
+
+.main_div_paymentContainer input[type=number]::-webkit-inner-spin-button, 
+.main_div_paymentContainer input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.main_div_paymentContainer label:nth-child(10){
+    /* background-color: #e67e22; */
+    grid-area: labelSecurityCode;
+    text-align: end;
+}
+
+.main_div_paymentContainer div:last-of-type{
+    /* background-color: #e74c3c; */
+    grid-area: inputMonthYear;
+    text-align: start;
+}
+
+.main_div_paymentContainer div input{
+    padding: 0.2rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    border-radius: 5px;
+}
+
+.main_div_paymentContainer label:nth-child(8){
+    /* background-color: #888888; */
+    grid-area: labelExpirationDate;
+    /* background-color: red; */
+    text-align: end;
+}
+
+.main_div_paymentContainer input:nth-child(11){
+    /* background-color: #2980b9; */
+    grid-area: inputSecurityCode;
+    padding: 0.2rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    border-radius: 5px;
+    width: 15%;
+    height: 80%;
+}
+
+.main_div_paymentContainer button{
+    /* background-color:#ed7669; */
+    font-size: 1.1rem;
+    grid-area: buttonSubmit;
+    width: 40%;
+    margin-top: 1rem;
+    margin-left: 16rem;
+    border-radius: 5px;
+    background-color: var(--blue);
+    color: #eee;
+    border: 1px solid var(--blue);
+    cursor: pointer;
+}
+
+.main_div_paymentContainer button:hover{
+    background-color: var(--darkBlue);
+    transition: 0.3s ease-in-out;
+}
+
+
+
+
+
+
+.main_div_paymentContainer input:nth-child(6),
+.main_div_paymentContainer input:nth-child(4){
+    padding: 0.2rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    border-radius: 5px;
+}
+
+
+.payment-active{
+    visibility: visible;
+    opacity: 100%;
+    transform: translateY(-5%);
+    z-index: 3;
+    transition: 1s ease-out;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+/***********************payment**********************/
